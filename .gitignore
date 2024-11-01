@@ -1,0 +1,6 @@
+*~
+*stats
+*.un~
+*.swp
+.template
+__pycache__
