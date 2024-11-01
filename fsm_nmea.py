@@ -31,6 +31,7 @@ author: vectorwang@hotmail.com
 change_history:
     20230106    remastered by vectorwang
     20230415    implemented comments by vectorwang
+    20241101    now detects msgs starting with !
 """
 
 from transitions import Machine
@@ -78,7 +79,7 @@ class NMEA():
             none or list[dict] with length 1, parsed data
         """
         try:
-            if ch=="$":
+            if ch=="$" or ch=="!":
                 self.dollarIn()
             elif ch=="*":
                 self.asteriskIn()
