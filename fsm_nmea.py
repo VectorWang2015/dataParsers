@@ -128,7 +128,7 @@ class NMEA():
         msg_head = msg_content_lst[0]
         msg_content_lst = msg_content_lst[1:]
 
-        return {"head":msg_head, "content":msg_content_lst, "crc":msg_crc}
+        return {"head":msg_head, "content":msg_content_lst, "crc":msg_crc, "raw":msg_str}
 
     def crc_check(
         self,
